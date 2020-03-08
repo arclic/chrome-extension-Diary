@@ -1,0 +1,77 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-compatible" content="ie=edge">
+		<title> How was your day? </title>
+		<link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		
+		<style>
+			body {
+				padding:0;
+				margin:0 20px 0 20px;
+				font-family: 'Spartan', sans-serif;
+				overflow-y:auto;
+			}
+			
+			.model-top{
+				width : 400px;
+				height : 50px;
+				border-bottom : 1px solid grey;
+				padding : 5px;
+				margin: 10px 5px 10px 5px;
+				text-align: center;
+			}
+			.model-body{
+				margin-bottom: 10px;
+			}
+			
+			.model-post {
+				margin-bottom: 20px;
+			}
+			
+			.post{
+				height : 100px;
+				overflow-y:auto;
+				font-size : 15px;
+			}
+			
+			.today{
+				font-weight: bold;
+			}
+			textarea{
+				width: 100%;
+				margin: 10px 0 10px 0;
+				resize : none;
+			}
+		
+		</style>
+	 </head>
+    <body>
+		<!-- Top Section -->
+		<div class="container model-top">
+			<h3 style="font-weight:bold;"> How was your day? </h3>
+		</div>
+		<!-- Body Section -->
+		<div class="container clearfix model-body">
+			<span id="today" class="today"> </span> <br>
+			<textarea class="form-control" rows="4" id="myTextarea"></textarea>
+			<button type="button" class="btn btn-outline-danger btn-xs" id="btn-remove">Remove today</button>
+			<div class="btn-group float-right">
+				<button type="button" class="btn btn-outline-info btn-xs" id="btn-clear">Clear</button>
+				<button type="button" class="btn btn-outline-info btn-xs" id="btn-post">Post</button>
+			</div>
+		</div>
+		<!-- Post Section -->
+		<div class="container model-post clearfix">
+			<h4 style="color:#296d98; font-weight:bold;"> Recent Post</h4>
+			<div id="recent-post">
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="popup.js"> </script>
+		
+    </body>
+  </html>
